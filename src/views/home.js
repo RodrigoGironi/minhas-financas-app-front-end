@@ -15,8 +15,8 @@ class Home extends React.Component{
     }
 
     componentDidMount(){               
-        const userLogado = JSON.parse(this.context.usuarioAutenticado)  //LocalStorageService.obterItem('_usuario_logado')
-        console.log("userLogado",userLogado)
+        const userLogado = this.context.usuarioAutenticado  //LocalStorageService.obterItem('_usuario_logado')
+        
         if(userLogado != null)
             this.service
                 .obterSaldoPorUsuario(userLogado.id)

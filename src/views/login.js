@@ -24,7 +24,7 @@ class Login extends React.Component{
             senha: this.state.senha
        }).then( response => {
             //LocalStorageService.adicionarItem('_usuario_logado', JSON.stringify(response.data))
-            this.context.iniciarSessao(JSON.stringify(response.data))    
+            this.context.iniciarSessao(response.data)   
             this.props.history.push('/home')
        }).catch( erro => {
             mensagemErro(erro.response.data)

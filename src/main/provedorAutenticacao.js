@@ -8,7 +8,7 @@ const AuthProvider = AuthContext.Provider
 class ProvedorAutenticacao extends React.Component{
     
     state = { 
-        usuarioAutenticado: {},
+        usuarioAutenticado: null,
         isAutenticado: false
     }
     
